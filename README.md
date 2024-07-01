@@ -9,6 +9,24 @@ Création d'une API JSON en local de type REST.
 
 Les endpoints (points d'accès) sont définis dans le fichier `db.json`.
 
+## Opérations
+
+Il est possible de faire les même opérations de CRUD classique : 
+
+| Opérations | HTTP |
+| --------- | ---- |
+| Création | POST |
+| Récupération | GET |
+| Modification | PUT |
+| Suppression | DELETE |
+
+
+### POST
+
+| Objectif | Endpoint | Paramètres |
+| -------- | -------- | ---------- |
+| Ajout d'un docteur | /doctors | donnée du schéma |
+
 ### GET
 
 | Objectif | Endpoint | Paramètres |
