@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import { useParams, redirect } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 export default function DoctorDelete() {
-    const { id }: any = useParams();
+    const { id } = useParams();
+    const Navigate = useNavigate();
 
     const deleteDoctor = async () => {
         try {
@@ -11,9 +12,9 @@ export default function DoctorDelete() {
                 {
                     method: 'DELETE',
                 }
-              );
+            );
             console.log(response);
-            return redirect('/');
+            Navigate('/doctors');
         } catch (error) {
             console.log(error);
         }
